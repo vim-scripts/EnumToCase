@@ -1,0 +1,9 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2707
+
+This is a very simple plugin that converts a list of enumerated names (copied and pasted directly from an enum block) into a set of correctly indented case statements.
+
+The command should be called as:
+
+:'<,'>EnumToCase
+
+More details are available at http://sites.google.com/site/abudden/contents/Vim-Scripts/enumtocase
