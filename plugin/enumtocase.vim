@@ -1,7 +1,7 @@
 " enumtocase
 "   Author: A. S. Budden
 "   Date:   8th July 2009
-"   Version: r271
+"   Version: r272
 
 if &cp || exists("g:loaded_enumtocase")
 	finish
@@ -15,7 +15,7 @@ function! EnumToCase() range
 	let EnumLines = getline(a:firstline, a:lastline)
 	let OriginalLineCount = len(EnumLines)
 	for index in range(OriginalLineCount)
-		let EnumLines[index] = substitute(EnumLines[index], '\s\+\(\k\+\)\%(\s*=\*\d\+\)\?\%(\s*,\)\?$', 'case \1:', '')
+		let EnumLines[index] = substitute(EnumLines[index], '^\s\+\(\k\+\)\%(\s*=\s*\d\+\)\?\%(\s*,\)\?$', 'case \1:', '')
 		call setline(a:firstline + index, EnumLines[index])
 	endfor
 	let ExtraLineCount = 0
